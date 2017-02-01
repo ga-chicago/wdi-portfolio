@@ -1,0 +1,29 @@
+
+body {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 { 
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	color: black;
+}
+nav {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.topNav {
+	color:white;
+	display:inline-block;
+}
+
+.botNav {
+	color: white
+	background-color:blue;
+	display: inline;
+	font-size:x-small
+	;
+}
+};
