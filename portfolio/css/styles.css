@@ -14,16 +14,12 @@ nav {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.topNav {
-	color:white;
-	display:inline-block;
+.topNav li{
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	display: inline-block;
+	background-color: grey; 
 }
-
-.botNav {
-	color: white
-	background-color:blue;
-	display: inline;
-	font-size:x-small
-	;
 }
 };
