@@ -57,9 +57,8 @@ table {
 
 body {
 	background-color: rgba(135, 255, 99, 0.1);
-	font-family: 'Lato', sans-serif;
+	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
-	text-align: center;
 }
 
 /* Grid Layout */
@@ -80,7 +79,7 @@ a {
 	text-decoration: none;
 }
 
-/* Primary Header */
+/* Navigation */
 
 .nav {
 	background-color: #3dcc12;
@@ -109,8 +108,9 @@ a {
 	display: inline-block;
 	padding: 14px 16px;
 	text-align: center;
-	text-decoration: none;
 }
+
+/* Primary Header */
 
 /* Primary Footer */
 
