@@ -49,6 +49,11 @@ img.picture {
   margin-right: auto;
 }
 
+p {
+  color: #555;
+  text-align: center;
+}
+
 footer {
   text-align: center;
 }
