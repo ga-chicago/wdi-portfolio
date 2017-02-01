@@ -7,22 +7,43 @@ body {
 
 header {
 	text-align: center;
-    background: url("http://i.imgur.com/iGffrcY.jpg");
+    background: url("https://speakeasyohiou.files.wordpress.com/2014/01/cincinnati-skyline_1.jpg");
     background-size:cover;
+    height: 550px;
+    position: relative;
+
+}
+
+h2 {
+	background-color: rgba(255,116,0, 0.2);
+	padding: 25px;
+	margin-bottom: 0px;
+	color: #DDDFE5;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
 }
 
 img {
 	border-radius: 100px;
 }
 
+nav{
+	background-color: rgba(255,116,0, 0.2);
+	padding: 15px;
+}
 
 nav a {
-	background-color: rgba(255,116,0, 0.2);
 	text-decoration: none;
 	color: #ff5900;
 	padding: 15px;
 	display: inline;
-	
+}
+
+nav a:hover{
+	background-color: rgba(221, 223, 229, 0.2);
 }
 
 li {
@@ -31,12 +52,13 @@ li {
 }
 
 a:link {
-	color: #ff5900;
-	text-decoration: none;
+	color: #DDDFE5;
+	text-decoration: underline;
 }
 
 a:visited {
-	color: #DDDFE5;
+	color: none;
+	text-decoration: none;
 }
 
 
