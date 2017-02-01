@@ -55,26 +55,6 @@ table {
 
 /* Custom Styles */
 
-/* Grid Layout */
-
-/* Home */
-
-/* Images */
-
-/* Links */
-
-/* Primary Header */
-
-/* Primary Footer */
-
-/* Rows */
-
-/* Typography */
-
-a {
-	text-decoration: none;
-}
-
 body {
 	background-color: rgba(135, 255, 99, 0.1);
 	font-family: 'Lato', sans-serif;
@@ -82,11 +62,25 @@ body {
 	text-align: center;
 }
 
+/* Grid Layout */
+
+/* Home */
+
+/* Images */
+
 .profile {
 	height: 10%;
 	width: 10%;
 	border-radius: 50%;
 }
+
+/* Links */
+
+a {
+	text-decoration: none;
+}
+
+/* Primary Header */
 
 .nav {
 	background-color: #3dcc12;
@@ -117,3 +111,9 @@ body {
 	text-align: center;
 	text-decoration: none;
 }
+
+/* Primary Footer */
+
+/* Rows */
+
+/* Typography */
