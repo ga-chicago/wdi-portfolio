@@ -1,0 +1,43 @@
+	
+body {background-image: url(../images/backchi.jpg); 
+		text-align: center;
+		font-family: 'Indie Flower', cursive;
+		color: #ffffff
+		;
+}
+
+img { width: 200px; 
+	  height: 200px;
+	  border: solid black 2px;
+	  margin: 25px 15px 0px 15px;
+
+	  }
+
+.header {
+			margin: 0;
+			clear: both;
+
+}
+
+.nav { background-color: #000000;
+
+ }
+
+.nav a { text-decoration: none;
+		list-style-type: none;
+		color: #ffffff;
+
+}
+
+.nav li { 
+		list-style-type: none;
+		display: inline;
+		padding: 5px 20px;
+		font-size: 40px;
+
+
+ }
+
+ .nav a:hover { color: #4c849d; 
+
+ }
