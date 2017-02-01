@@ -7,10 +7,11 @@ body {
 img.headpic {
 }
 .menu_box {
+	margin-left: 50px;
 	border: 1px solid black;
 	float: right;
 }
-.c {
+.content {
 	border: 1px solid red;
 	float: left;
 	text-align: left;
@@ -19,12 +20,13 @@ img.headpic {
 }
 .contain {
 	border: 1px solid blue;
-	text-align: right;
 	background-color: gray;
+	text-align: right;
 	/*height: 400px;*/
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
 	color: white;
 }
-.contain ul {
-	margin: 50px;
+.middle {
+	display: inline-block;
+	border: 1px solid yellow;
 }
