@@ -10,16 +10,40 @@ h1 {
 	text-align: center;
 	color: black;
 }
-nav {
-	font-family: 'Open Sans', sans-serif;
+
+nav a {
+	background-color: #ffbf00;
+	color: white;
+	padding: 35px;
+	display: inline-block;
+	float: left;
 }
 
-.topNav li{
-	margin: 0;
-	padding: 0;
-	height: 50px;
-	display: inline-block;
-	background-color: grey; 
+nav a:hover {
+	background-color: #ee5f3c
 }
+
+.clearfix:after {
+	visibility: hidden;
+	display: inline-block;
+	content: "";
+	clear: both;
+	height: 0;
+	font-size: 0;
+}
+
+.botNav li {
+	display: inline;
+	font-size: x-small;
+}
+
+.bigger span {
+	font-weight: bold;
+	font-size: larger;
+}
+
+footer {
+	width: 100%
+	background-color:grey;
 }
 };
