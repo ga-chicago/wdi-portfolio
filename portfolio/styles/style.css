@@ -5,27 +5,51 @@ body {
 				color: #FF5900;
 			}
 
-head{
-	background:url(http://i.imgur.com/lcdBNdC.jpg);
+header {
+	text-align: center;
+    background: url("http://i.imgur.com/iGffrcY.jpg");
+    background-size:cover;
 }
 
 img {
 	border-radius: 100px;
 }
 
-ul {
-	display: block;
+
+nav a {
+	background-color: rgba(255,116,0, 0.2);
+	text-decoration: none;
+	color: #ff5900;
+	padding: 15px;
+	display: inline;
 	
 }
 
 li {
+	display: inline;
 	list-style-type: none;
 }
 
 a:link {
+	color: #ff5900;
 	text-decoration: none;
 }
 
 a:visited {
-	text-decoration: underline;
+	color: #DDDFE5;
+}
+
+
+footer{
+	text-align: center;
+	clear: both;
+}
+
+.clearfix.after{
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+	font-size: 0;
 }
