@@ -1,24 +1,21 @@
 body {
-    background-color: #F4F4DB;
+    background-color: #F0F6F7;
   }
 header {
 }
-img {
+/*img {
   float:left;
-}
+  height: 200px;
+}*/
 h1 {
   display: inline-block;
-  font-size: 160px;
+  font-size: 130px;
   font-weight: lighter;
   letter-spacing: 9px;
   padding-top: 10px;
   padding-left: 50px;
   margin: 0;
 
-}
-img {
-  height: 200px;
-}
 nav {
   clear:both;
   background-color: #A86828;
@@ -39,10 +36,6 @@ a {
   padding: 15px;
 }
 
-
-p {
-  padding: 50px 125px 0px 350px;
-  font-size: 1.2em;
 }
 footer {
   text-align: center;
