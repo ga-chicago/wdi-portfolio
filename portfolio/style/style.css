@@ -1,0 +1,52 @@
+body{
+			background-color: #99badd;
+			text-align: center;
+			color: white;
+			margin: 0;
+			padding: 0;
+			height: 100%
+
+}
+header{
+	background-color: #00FA9A;
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+}
+footer{
+	background-color: #708090;
+	text-align: center;
+	 position: absolute;
+   bottom: 0;
+   width:100%;
+
+}
+ul li{
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+nav{
+	background-color: #708090;
+	text-align: center;
+	bottom: 0;
+	position: absolute; 
+    width: 100%;
+}
+#left {
+	float: left;
+	width: 33%;
+}
+
+#right {
+	float: right;
+	width: 33%;
+
+}
+#center {
+	display: inline-block;
+	width: 33%;
+}
