@@ -5,13 +5,17 @@ body {
 				color: #FF5900;
 			}
 
+head{
+	background:url(http://i.imgur.com/lcdBNdC.jpg);
+}
+
 img {
 	border-radius: 100px;
 }
 
-nav {
+ul {
 	display: block;
-	float: left;
+	
 }
 
 li {
