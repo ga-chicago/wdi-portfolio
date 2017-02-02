@@ -3,9 +3,9 @@
 	<head>
 		<title>My Portfolio</title>
 		<link href="styles/styles.css" rel="stylesheet" type="text/css" />
-		<link href=href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	</head>
-	<body>
+	<body onload="swapParagraphs();">
 		<nav>
 			<ul class="nav">
 				<li><a href="index.html">Home</a></li>
@@ -21,7 +21,7 @@
 		<div class="row">
 
 			<section class="col-2-3">
-				<p>
+				<p id="homeText">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -48,5 +48,7 @@
 			</aside>
 
 		</div>
+
+		<script src="js/script.js" type="text/javascript"></script>
 	</body>
 </html>
