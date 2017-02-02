@@ -58,7 +58,12 @@ table {
 body {
 	background-color: rgba(135, 255, 99, 0.1);
 	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 15px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 44px;
 }
 
 /* Grid Layout */
@@ -76,6 +81,7 @@ body {
 .col-1-3,
 .col-2-3 {
 	display: inline-block;
+	margin: 0 15px;
 	padding-left: 15px;
 	padding-right: 15px;
 	vertical-align: top;
@@ -97,18 +103,12 @@ body {
 	text-align: center;
 }
 
-.personal {
-	margin-bottom: 44px;
-}
-
 .personal-info img {
 	border-radius: 50%;
-	height: 130px;
-	margin: -66px 0 22px 0;
+	height: 180px;
+	margin: -91px 0 22px 0;
 	vertical-align: top;
 }
-
-/* Images */
 
 /* Links */
 
