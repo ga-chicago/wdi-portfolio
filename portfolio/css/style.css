@@ -38,6 +38,10 @@ nav a:hover {
 	background-color: #b30077;
 }
 
+p {
+	text-align: left;
+}
+
 .clearfix:after {
         visibility: hidden;
         display: inline-block;
@@ -51,8 +55,41 @@ nav a:hover {
 	font-size: 14px;
 }
 
-.social {
-	display: inline;
+#content {
+  float: left ;
+  width: 80% ;
+  background-color: pink;
+  color: black;
+  border: 2px solid white;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+
+}
+#content2 {
+  float: left ;
+  width: 80% ;
+  background-color: pink;
+  color: black;
+  border: 2px solid white;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+
+#content3 {
+  float: left;
+  width: 80% ;
+  background-color: pink;
+  color: black;
+  border: 2px solid white;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+
+#container {
+	display: inline-block;
 }
 
 footer {
