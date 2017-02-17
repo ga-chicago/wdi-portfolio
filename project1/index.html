@@ -5,7 +5,11 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<!-- Latest compiled and minified CSS -->
+<script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+      	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -13,19 +17,17 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
 </head>
 <body>	
-	<header><img class = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" ></header>
-	<div class = "clearfix"></div>
-	<div class = "container">
-		<div class = "row">
-			<div class = "col">left col'</div>
-			<div class = "col-6">middle col'</div>
-			<div class = "col">right col'</div>
+		<header><img class = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" ></header>
+		<div class = "container">
+		<div class = "clearfix"></div>
+			<div class = "row">
+				<div class = "col-6">midLeft col'</div>
+					<div id = "board"></div>
+					<div id = "inPlay"></div>
+			<div class = "col">midRight col'</div>	
+			<div id = "footer"></div>
 		</div>
 	</div>
 	<script src="js/app.js"></script>
