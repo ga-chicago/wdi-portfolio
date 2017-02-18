@@ -19,17 +19,52 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>	
-		<header><img class = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" ></header>
-		<div class = "container">
-		<div class = "clearfix"></div>
-			<div class = "row">
-				<div class = "col-6">midLeft col'</div>
-					<div id = "board"></div>
-					<div id = "inPlay"></div>
-			<div class = "col">midRight col'</div>	
-			<div id = "footer"></div>
+		<header>
+			<img class = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" >
+			<div>
+				<ul>
+					<li img src = "#" href ="#"></li>
+					<li img src = "#" href ="#"></li>
+					<li img src = "#" href ="#"></li>
+				</ul>
+			</div>
+			</header>
+		<div class = "clearfix">			
 		</div>
-	</div>
+
+		<div id = "container">
+			<div id = "board"></div>
+			
+			<div id = "inPlay">
+				<div id = "timer"></div>
+				<div id = "cardInPlay"></div>
+				<div id = "deck"></div>
+			</div>
+				
+			<div id = "buttons">
+				<div class = 'start'>
+					<div class = 'hidden'></div>
+					<div class = 'active'></div>
+				</div>	
+				<div class = 'easy'>
+					<div class = 'hidden'></div>
+					<div class = 'active'></div>
+				</div>
+				<div class = 'hard'>
+					<div class = 'hidden'></div>
+					<div class = 'active'></div>
+				</div>	
+			</div>		
+
+			<div id = "footer">	
+				<article id = 'instruct'></article>
+					<p><span>INSTRUCTIONS:</span><br> 1. Look at the large card in play.  Press START <br>2.  Click on all equivalent fractions above it before time expires.
+					</p>
+				<p id = 'about'><img src = "https://s.evbuc.com/https_proxy?url=http%3A%2F%2Fculturelabx.com%2Fwp-content%2Fuploads%2F2014%2F10%2Fgeneral-assembly-logo.png&sig=ADR2i7_SVYyXSfxA0eqT_cGehyxS7RPckQ"> Created by GA Student - John Favors - 2017</p>
+			</div>	
+		</div>	
+
 	<script src="js/app.js"></script>
 </body>
 </html>
+
