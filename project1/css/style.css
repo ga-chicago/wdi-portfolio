@@ -9,6 +9,7 @@ header{
 
 #logo {
 	padding: none;
+	margin-top: -37px;
 
 }
 
@@ -80,7 +81,7 @@ h1 #score {
 }
 
 #buttons {
-	
+	margin-left: 100px;
 
 }
 
