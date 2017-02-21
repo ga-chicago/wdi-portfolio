@@ -37,7 +37,7 @@ ul {
 
 }
 
-.cards {
+.cards, .playCard{
 	width: 100px;
 	height: 150px;
 	border-radius: 10px;
@@ -47,10 +47,6 @@ ul {
 	float: left;
 	text-align: center;
 	font-size: 4em;
-
-
-
-
 }
 
 #inPlay {

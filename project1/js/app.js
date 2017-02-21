@@ -1,27 +1,127 @@
 console.log('JS is loaded!');
 
-//create the basic DOM structure in HTML add other features dynamically
+//Define A Card
+// $('card') = function(numerator, denominator, value, divider){
+// 	var numerator = [];
+// 	var denominator = [];
+// 	var divider = "/"
+// 	var value = numerator/denominator;
+//}
 
-// create a sticky header so the header remains as user scrolls
-// $('window').scroll(function(){
-// 	if($(this).scrollTop() > 1){
-// 		$('header').addClass("sticky");
+//create Decks
+var decks = [
+[{text: "8/10", value: .5},{text: "3/4", value: .75}, {text: "1/5", value: .2}, 
+{text: "3/8", value: .375}, {text: "6/10", value: .6}, {text: "4/5", value: .8, ans:.8 }],
+
+[{text: "4/8", value: .5},{text: "5/1", value: 5}, {text: "100/200", value: .5}, 
+{text: "3/24", value: .125}, {text: "4/2", value: 2}, {text: "1/8", value: ..125, ans:.125 }],
+
+[{text: "8/16", value: .5},{text: "19/20", value: .95}, {text: "12/16", value: ..75}, 
+{text: "9/10", value: .9}, {text: "6/10", value: .6}, {text: "3/4", value: .75, ans:.75 }],
+
+[{text: "7/7", value: 1},{text: "7/21", value: .333}, {text: "7/28", value: .25}, 
+{text: "7/14", value: .5}, {text: "7/56", value: .125}, {text: "1/3", value: .333, ans:.333}],
+
+[{text: "3/5", value: .6},{text: "15/20", value: .80}, {text: "2/5", value: .4}, 
+{text: "3/8", value: .375}, {text: "4/4", value: 1}, {text: "8/20", value: .4, ans:.4 }],
+
+[{text: "3/20", value: .15},{text: "12/18", value: .667}, {text: "1/5", value: .2}, 
+{text: "3/9", value: .333}, {text: "4/10", value: .4}, {text: "6/9", value: .667, ans:.667 }],
+
+[{text: "7/20", value: .35},{text: "6/8", value: .75}, {text: "14/7", value: 2}, 
+{text: "6/16", value: .375}, {text: "3/5", value: .6}, {text: "6/3", value: 2, ans:2 }]
+
+];
+
+//new game
+
+function newGame(){
+	$('#1').data('value',.333).text('2/6'); 
+	$('#2').data('value',.666).text('4/6'); 
+	$('#3').data('value',.125).text('1/8'); 
+	$('#4').data('value',.5).text('5/10'); 
+	$('#5').data('value',.75).text('6/8'); 
+	$('.playCard').data('value',.666).text('2/3');
+}
+
+//Create a Deck of Cards Dynamically
+// $('deck') = function (n, d, value){
+// 	for (n = 0; n <= 10; n++){
+// 		for (d = 0; d <=10; d++) {
+// 			var $('cardInDeck').text.innerHTML(n + divider + d);
+// 			var $('cardInDeck').value = (n / d);
+// 		}
 // 	}
-// 	else{
-// 		$('header').removeClass("sticky");
-// 	}
-// });
+// }
 
-//Global Variables
+//Initiate Game
+// $(document).ready() 
+// $('init') = function(){
+// 	numerator = ""
+// 	denominator	= ""
+// 	$('start').undhide;
+// 	$('easy').undhide;
+// 	$('hard').unhide;
+// 	$('timer').hidden;
+// 	$('reset').hidden;
+// }
 
-//Play game click on card in board and compare value to card in play
-$('.cards').click(function(e){
-	console.log('click!')
-	var clickValue = $(e.target).data('value')
-	if (clickValue = equal.datavalue){
-		console.log('equivalent!')
+//Define Buttons and functions
+// $('easy').click(function({
+// 	$('countdown').sec = 10;
+// })
+
+// $('easy').click(function({
+// 	$('countdown').sec = 20;
+// })
+
+
+//Start Game
+// $('.start').click(function(){
+// 	sec = 0;
+// 	$('timer').unhide;
+// 	$('countdown')();
+// 	$('start').hidden;
+// 	$('easy').hidden;
+// 	$('hard').hidden;
+
+// })
+
+//init timer
+// $('.countdown') = function (sec, count){		//called when user clicks start
+// 		var sec = 15; 							//....default
+// 		var count = setInterval(function(){
+// 		$('timer.count').text(": " + sec--)
+// 		if (sec == -1){
+// 			$('timer.count').fadeOut('slow')
+// 			console.log(sec);
+// 			clearInterval(count);
+// 			$('reset'),unhide;
+// 		}
+// }, 1000);										//counts in miliseconds
+
+
+//Play the Game	
+
+	$('.cards').click(function(e){
+		console.log('clicked');
+		var clickValue = $(e.target).data('value');	
+		var playValue = $('.playCard').data('value');	
+	if (clickValue === playValue){
+			newGame();
 	}
-})
+	else {
+		console.log ('try Again.');
+	}
+});
+
+// 	if (clickValue === playValue){
+// 			console.log('equivalent!');
+// 	}
+// 	else {
+// 		console.log ('try Again.');
+// 	}
+// };
 
 //Load and Initiate the Game
 // var matches = 0
