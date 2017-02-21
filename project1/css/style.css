@@ -1,52 +1,142 @@
-div.container {
-}
-
-header {
+/*Header Area*/
+header{
 	width: 100%;
-	height: 75px;
-	display: inline-block;
-	background: #efc47D;
+	height: 100px;
+	background-color: lightyellow;
+	border-radius: 10px;
+	margin: 5px;
 }
-/*header {
-	position: fixed;
-	width: 100%;
-	background: #efc47D;
-	height: 110px;
-	transition: all 0.4s ease;
-}*/
 
 #logo {
-	position: fixed;
-	top: 15;
-	left: 15;
+	padding: none;
 
 }
 
-/*header.sticky {
-	background: #efc47D;
-}*/
+#share {
 
-#footer{
-	width: 100%;
-	height: 125px;
-	background: #efc47D;
 }
 
-div.clearfix {
+ul {
+
+}
+
+.clearfix {
 	clear: all;
 }
 
-span {
-	font-weight: bold;
+/*Board Area*/
+#board {
+	width:48%;
+	height: 500px;
+	background: lightgreen;
+	border-radius: 20px;
+	margin: 3px;
+	float: left;
+	display: flex;
+
 }
 
-#board {
-	background: rgb(170, 237, 193);
-	height: 450px;
-	width: 100%;
+.cards {
+	width: 100px;
+	height: 150px;
+	border-radius: 10px;
+	margin: 10px;
+	background-color: white;
+	background: url("images/algorithms-1641852_640.png") width 100px;
+	float: left;
+
+
 }
 
 #inPlay {
-	background: lightyellow;
-	height: 250px;
+	width: 48%;
+	height: 500px;
+	background: lightblue;
+	border-radius: 20px;
+	margin: 3px;
+	float: right;
+	display: flex;
+
+}
+
+#cardInPlay{
+
+}
+
+#deck {
+
+}
+
+#timer {
+
+}
+
+#score {
+
+}
+
+h1 #score {
+	color: green;
+}
+
+#buttons {
+	
+
+}
+
+.hidden {
+
+}
+
+.active {
+
+}
+
+#easy {
+
+}
+
+#hard {
+
+}
+
+#start {
+
+}
+
+#next {
+
+}
+
+#reset {
+
+}
+
+button#active {
+	background: green;
+}
+
+button#hidden {
+	background: grey;
+}
+
+#footer {
 	width: 100%;
+	height: 150px;
+	background: lightgrey;
+	border-radius: 10px;
+	margin:5px;
+}
+
+#instruct {
+
+}
+
+#about {
+
+}
+
+
+
+
+

@@ -9,6 +9,8 @@
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>      
       	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -19,43 +21,111 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>	
+
+<!--Logo and Share Buttons-->
 		<header>
-			<img class = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" >
+			<img id = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" >
 			<div>
-				<ul>
-					<li img src = "#" href ="#"></li>
-					<li img src = "#" href ="#"></li>
-					<li img src = "#" href ="#"></li>
+				<ul id = 'share'>
+					<li img src = "#" href ="#">Facebook</li>
+					<li img src = "#" href ="#">Twitter</li>
+					<li img src = "#" href ="#">Instagram</li>
 				</ul>
 			</div>
 			</header>
 		<div class = "clearfix">			
 		</div>
 
-		<div id = "container">
-			<div id = "board"></div>
-			
-			<div id = "inPlay">
-				<div id = "timer"></div>
-				<div id = "cardInPlay"></div>
-				<div id = "deck"></div>
+<!--Board Area-->
+			<div id = "board">
+				<div id = 'winner'>
+					<h2>Great Job!</h2>
+				</div>
+				<div class = 'row'>
+					<div class = "cards">
+						<div class = "front">FRONT
+						<div class = "back">BACK
+						</div>
+							</div>
+					</div>		
+					<div class = "cards">
+						<div class = "front">FRONT
+							<div class = "back">BACK
+						</div>
+							</div>
+					</div>
+					<div class = "cards">
+						<div class = "front">FRONT
+							<div class = "back">BACK
+						</div>
+							</div>
+					</div>
+					<div class = "cards">
+						<div class = "front">FRONT
+							<div class = "back">BACK
+						</div>
+							</div>
+					</div>
+					<div class = "cards">
+						<div class = "front">FRONT
+							<div class = "back">BACK
+						</div>
+							</div>
+					</div>					
+				</div>	
 			</div>
-				
+
+<!--Card in Play-->
+			<div id = "inPlay">	
+				<div class = "equals">
+					<div class = 'front'>
+						<h3>FRONT</h3>
+					</div>
+					<div class = 'back'>
+						<img src = "http://placekitten.com/g/200/300" alt = "">
+					</div>
+				</div>	
+<!--Display Deck-->
+				<div id = "deck"></div>
+
+<!--Timer Area-->		
+				<div id = "timer"></div>
+					<h3>time</h3>
+					<h1>:00</h1>
+<!--Scoring Display Area-->			
+				<div id = "score">
+					<h3>score</h3>
+					<h1>00000</h1>
+			</div>			
+
+<!--Buttons that Control Game-->		
+			<div class = 'row'></div>		
 			<div id = "buttons">
 				<div class = 'start'>
-					<div class = 'hidden'></div>
-					<div class = 'active'></div>
+					<button class = 'hidden'>START</button>
+					<button class = 'active'>START</button>
+				</div>	
+				<div class = 'next'>
+					<button class = 'hidden'>EASY</button>
+					<button class = 'active'>EASY</button>
+				</div>
+				<div class = 'reset'>
+					<button class = 'hidden'>HARD</button>
+					<button class = 'active'>HARD</button>
 				</div>	
 				<div class = 'easy'>
-					<div class = 'hidden'></div>
-					<div class = 'active'></div>
+					<button class = 'hidden'>EASY</button>
+					<button class = 'active'>EASY</button>
 				</div>
 				<div class = 'hard'>
-					<div class = 'hidden'></div>
-					<div class = 'active'></div>
-				</div>	
-			</div>		
-
+					<button class = 'hidden'>HARD</button>
+					<button class = 'active'>HARD</button>
+				</div>
+			</div>	
+			</div>
+			<div class = 'row'></div>
+		
+<!--Instructions and Author-->
 			<div id = "footer">	
 				<article id = 'instruct'></article>
 					<p><span>INSTRUCTIONS:</span><br> 1. Look at the large card in play.  Press START <br>2.  Click on all equivalent fractions above it before time expires.
