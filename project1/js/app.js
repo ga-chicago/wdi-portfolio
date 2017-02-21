@@ -14,26 +14,35 @@ console.log('JS is loaded!');
 
 //Global Variables
 
-//Load and Initiate the Game
-var matches = 0
-var score = function {
-	matches * 50;
-}
-$(start);
+//Play game click on card in board and compare value to card in play
+$('.cards').click(function(e){
+	console.log('click!')
+	var clickValue = $(e.target).data('value')
+	if (clickValue = equal.datavalue){
+		console.log('equivalent!')
+	}
+})
 
-function $(start) {
+//Load and Initiate the Game
+// var matches = 0
+// var score = function {
+// 	matches * 50;
+// }
+// $(start);
+
+// function $(start) {
 
 	//hide-unhide winner message
-	$('winner').hide();
-	$('winner').css({
-		color: Green;
-	})
+	// $('winner').hide();
+	// $('winner').css({
+	// 	color: Green;
+	// })
 
 //Reset game cards empty 
-$('cards') = ();
-$('equals')	= ();
+// $('cards') = ();
+// $('equals')	= ();
 
-}
+// }
 
 //Create row of card slots to drag to #board
 

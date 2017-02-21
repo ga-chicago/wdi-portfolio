@@ -45,6 +45,10 @@ ul {
 	background-color: white;
 	background: url("images/algorithms-1641852_640.png") width 100px;
 	float: left;
+	text-align: center;
+	font-size: 4em;
+
+
 
 
 }
@@ -81,7 +85,8 @@ h1 #score {
 }
 
 #buttons {
-	margin-left: 100px;
+	margin-left: 50px;
+	display: inline-block;
 
 }
 
