@@ -102,15 +102,23 @@ function newGame(){
 // 		}
 // }, 1000);										//counts in miliseconds
 
+//Score It! - keeps score in the game 
+scoreValue = 0;
+
+function scoreIt (){
+$('.score').text(score +=50);
+	$('.scoreValue').text(score);
+}
 
 //Play the Game	
-
+var score = 0;
 	$('.cards').click(function(e){
 		console.log('clicked');
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
 	if (clickValue === playValue){
 			alert('You Got It!')
+			scoreIt();
 			newGame();				//gives games speed-action
 	}
 	else {
