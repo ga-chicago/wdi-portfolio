@@ -94,12 +94,11 @@ function newGame(){
 // $('.countdown') = function (sec, count){		//called when user clicks start
 // 		var sec = 15; 							
 // 		var count = setInterval(function(){
-// 		$('timer.count').text(": " + sec--)
+// 		$('clock.count').text(": " + sec--)
 // 		if (sec == -1){
-// 			$('timer.count').fadeOut('slow')
+// 			$('clock.count').fadeOut('slow')
 // 			console.log(sec);
 // 			clearInterval(count);
-// 			$('reset'),unhide;
 // 		}
 // }, 1000);										//counts in miliseconds
 
@@ -111,124 +110,57 @@ function newGame(){
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
 	if (clickValue === playValue){
-			newGame();
+			alert('You Got It!')
+			newGame();				//gives games speed-action
 	}
 	else {
-		console.log ('try Again.');	
+		alert('try Again.');	
 	}
 });
 
-// 	if (clickValue === playValue){
-// 			console.log('equivalent!');
-// 	}
-// 	else {
-// 		console.log ('try Again.');
-// 	}
-// };
-
-//Load and Initiate the Game
-// var matches = 0
-// var score = function {
-// 	matches * 50;
-// }
-// $(start);
-
-// function $(start) {
-
-	//hide-unhide winner message
-	// $('winner').hide();
-	// $('winner').css({
-	// 	color: Green;
-	// })
-
-//Reset game cards empty 
-// $('cards') = ();
-// $('equals')	= ();
-
-// }
-
-//Create row of card slots to drag to #board
-
-
-//Create row of cards to drap #inPlay
-
-
-//function to check each match and drop cards
-
-
-
-
-//Define the cards
-// var numerator = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// var denominator = [0, 1., 2, 3, 4, 5, 6, 7, 8, 9];
-// var slash = "__";
-// var value = []; 
-// var count = 0;
-
-
-
-//Create cards to play (#inPlay)
-// function makeCardDeck(margin){
-// 	var left = 0;
-// 	var step = margin;
-// 	var s = 0
-
-// $('.cards').each(function(){	
-// 	$(this).css({'z-index' : s});
-// 	$(this).css({'margin-left' :left + 'px'});
-// 	$(this).css({'margin-top' :0 + 'px'});
-// 	left = left + step;
-// 	s++;
-// });
-// }
-
-//Create board to drag cards to (#board)
-
-//Create Shuffle Function (run inside start function)
-
-
-
-//Create Deal function (run inside start function)
-
-//Create Board
-//Create 12 playing cards on board
-
-
-//Create Card in Play Area
 
 //Create Button & Timer Area
 
 
 //CREATE TIMER 
-// $('#timer') = function(){
-// 	var countdown = function (sec, count){		//called when user clicks start
+// $('.clock') countdown function(sec, count){		//call when each deck is played
 // 		var sec = 15; 							//....default
 // 		var count = setInterval(function(){
-// 		$('.clock.count').text(": " + sec--)
+// 		$('.clock.').text(": " + sec--)
 // 			console.log(sec)
-// 		if (sec == -1){
-// 			$('.clock.count').fadeOut('slow')
+// 			if (sec == -1){
+// 			$('.clock').fadeOut('slow')
 // 			clearInterval(count);
-// 		}
+// 			}
 // 		}, 1000);			
-//  	}
 // }
+// countdown();
 
 
 
 //CREATE BUTTONS
-// var easyBtn = $('<button>EASY</button>').click(function(){
-// 	easyBtn.prop('id', 'easyBtn')
-// 	buttons.append(easyBtn);
+$('.start').click(function(e){
+	countdown();
+	console.log('start!')
+})
 
+$('.reset').click(function(e){
+	console.log('reset!')
+	window.location.reload(true);
+})
 
-// 	console.log('easyBtn clicks!')
-// }
+$('.easy').click(function(e){
+	var sec = 25;
+	$('clock').text(":" + 25);
+	console.log('easy! timer set at: ' + sec + ' seconds');
+})
 
-//$('sec') = 7;
-//add functionality
-//append to buttonsDiv[0]
+$('.hard').click(function(e){
+	var sec = 15
+	$('clock').text(":" + 15);
+	console.log('hard! timer set at: ' + sec + ' seconds');
 
+})
 
 //board is an object w/properties
 //inPlay is an object w/properties
