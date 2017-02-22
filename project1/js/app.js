@@ -69,39 +69,6 @@ function newGame(){
 // 	$('reset').hidden;
 // }
 
-//Define Buttons and functions
-// $('easy').click(function({
-// 	$('countdown').sec = 10;
-// })
-
-// $('easy').click(function({
-// 	$('countdown').sec = 20;
-// })
-
-
-//Start Game
-// $('.start').click(function(){
-// 	sec = 0;
-// 	$('timer').unhide;
-// 	$('countdown')();
-// 	$('start').hidden;
-// 	$('easy').hidden;
-// 	$('hard').hidden;
-
-// })
-
-//init timer
-// $('.countdown') = function (sec, count){		//called when user clicks start
-// 		var sec = 15; 							
-// 		var count = setInterval(function(){
-// 		$('clock.count').text(": " + sec--)
-// 		if (sec == -1){
-// 			$('clock.count').fadeOut('slow')
-// 			console.log(sec);
-// 			clearInterval(count);
-// 		}
-// }, 1000);										//counts in miliseconds
-
 //Score It! - keeps score in the game 
 scoreValue = 0;
 
@@ -110,111 +77,72 @@ $('.score').text(score +=50);
 	$('.scoreValue').text(score);
 }
 
-//Play the Game	
+//PLAY THE GAME	- the clicking action the chooses fractions and changes board
 var score = 0;
 	$('.cards').click(function(e){
 		console.log('clicked');
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
 	if (clickValue === playValue){
-			alert('You Got It!')
+			setTimeout(function(){
+				$(this).effect('pulsate', {times:3}, 2000);
+				scoreIt();
+			}, 3025);
+//			alert('You Got It!')
 			scoreIt();
-			newGame();				//gives games speed-action
+			newGame();				//called here gives game some continuous speed
 	}
 	else {
 		alert('try Again.');	
 	}
 });
 
-
-//Create Button & Timer Area
-
-
-//CREATE TIMER 
-// $('.clock') countdown function(sec, count){		//call when each deck is played
-// 		var sec = 15; 							//....default
-// 		var count = setInterval(function(){
-// 		$('.clock.').text(": " + sec--)
-// 			console.log(sec)
-// 			if (sec == -1){
-// 			$('.clock').fadeOut('slow')
-// 			clearInterval(count);
-// 			}
-// 		}, 1000);			
-// }
-// countdown();
+//CREATE TIMER and countdown function
+var sec = 15;
+countdown = function(){		//call when each deck is played
+		var count = setInterval(function(){
+		$('.sec').text(sec--);
+			$('.clockValue').text(sec);
+			console.log(sec);
+			if (sec == 0){
+				$('.clockValue').text('TIMES UP!');
+				$('.clockValue').fadeOut('slow');
+				$('cards').hide();
+				clearInterval(count);
+			}
+		}, 1000);			
+}
 
 
-
-//CREATE BUTTONS
-$('.start').click(function(e){
+//CREATE BUTTONS - start, reset and change difficulty
+$('.start').click(function(e){			//starts clock and toggles buttons
 	countdown();
+	$('.start').hide();
+	$('.easy').hide();
+	$('.hard').hide();
 	console.log('start!')
 })
 
-$('.reset').click(function(e){
+$('.reset').click(function(e){			//refreshes page and restarts game
 	console.log('reset!')
 	window.location.reload(true);
 })
 
-$('.easy').click(function(e){
-	var sec = 25;
-	$('clock').text(":" + 25);
+$('.easy').click(function(e){			//makes game easy
+	$('clockValue').text(25);
+	sec = 25;
+  
 	console.log('easy! timer set at: ' + sec + ' seconds');
 })
 
-$('.hard').click(function(e){
-	var sec = 15
-	$('clock').text(":" + 15);
+$('.hard').click(function(e){			//makes game harder
+	sec = 15;
+	$('clockValue').text(15);
 	console.log('hard! timer set at: ' + sec + ' seconds');
 
 })
 
-//board is an object w/properties
-//inPlay is an object w/properties
-//inPlayDeck is array of card values
-//boardDeck is array of arrays card values
-//var score = 0, 						
-//you rock is an function
 
-//DISABLE BUTTONS
-// var buttonsDisable = function(){	//Function to disable the all the buttons
-// 	$('easyBtnGrey').unhide;		//not called until user presses start
-// 	$('hardBtnGrey').unhide;
-// 	$('StartBtn').undhide;
-// 	$('easyBtn').hide;
-// 	$('hardBtn').hide;
-// 	$('StartBtn').hide;
-// },
-
-//START GAME
-// $('#startBtn').start(function){		//function that starts the game and 
-// 	var startGame = $('<button>', 		//hides buttons that can't ge used
-// 	{text: 'START', 
-// 	click: function(){
-// 		setInterval(timer);		
-// 		$('easyBtnGrey').unhide;	
-// 		$('hardBtnGrey').unhide;	
-// 		$(this.btn).hidden			
-// 		$('startGreyBtn').hidden;
-// 	}	
-// 	})	
-// }
-							
-// startGame();
-
-
-
-//USER STORY:
-// 1. User presses Start
-// 2. The usercan leave the default of easy or press hard to change the timer 
-// 3. The clock begins to count down
-// 4. The user has to click all of the equivalent fractions on the board 
-//    set qual to the card in play before time runs time runs fadeOut
-// 5. Each correct answer turns the card green and adds 100 points
-// 6. Each wrong answer turns the card red and subtracts 75 points
-// 7. When the clock hits zero the score is flashed and the button to 
-//    play again appears
 
 
 
