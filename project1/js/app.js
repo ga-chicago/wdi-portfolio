@@ -10,13 +10,13 @@ console.log('JS is loaded!');
 
 //create Decks
 var decks = [
-[{text: "8/10", value: .5},{text: "3/4", value: .75}, {text: "1/5", value: .2}, 
+[{text: "8/10", value: .8},{text: "3/4", value: .75}, {text: "1/5", value: .2}, 
 {text: "3/8", value: .375}, {text: "6/10", value: .6}, {text: "4/5", value: .8, ans:.8 }],
 
 [{text: "4/8", value: .5},{text: "5/1", value: 5}, {text: "100/200", value: .5}, 
-{text: "3/24", value: .125}, {text: "4/2", value: 2}, {text: "1/8", value: ..125, ans:.125 }],
+{text: "3/24", value: .125}, {text: "4/2", value: 2}, {text: "1/8", value: .125, ans:.125 }],
 
-[{text: "8/16", value: .5},{text: "19/20", value: .95}, {text: "12/16", value: ..75}, 
+[{text: "8/16", value: .5},{text: "19/20", value: .95}, {text: "12/16", value: .75}, 
 {text: "9/10", value: .9}, {text: "6/10", value: .6}, {text: "3/4", value: .75, ans:.75 }],
 
 [{text: "7/7", value: 1},{text: "7/21", value: .333}, {text: "7/28", value: .25}, 
@@ -35,13 +35,16 @@ var decks = [
 
 //new game
 
+var deckNum = 0;
+
 function newGame(){
-	$('#1').data('value',.333).text('2/6'); 
-	$('#2').data('value',.666).text('4/6'); 
-	$('#3').data('value',.125).text('1/8'); 
-	$('#4').data('value',.5).text('5/10'); 
-	$('#5').data('value',.75).text('6/8'); 
-	$('.playCard').data('value',.666).text('2/3');
+	$('#1').data('value',decks [deckNum][0].value).text(decks [deckNum][0].text); 
+	$('#2').data('value',decks [deckNum][1].value).text(decks [deckNum][1].text); 
+	$('#3').data('value',decks [deckNum][2].value).text(decks [deckNum][2].text); 
+	$('#4').data('value',decks [deckNum][3].value).text(decks [deckNum][3].text); 
+	$('#5').data('value',decks [deckNum][4].value).text(decks [deckNum][4].text); 
+	$('.playCard').data('value',decks [deckNum][5].value).text(decks [deckNum][5].text);
+	deckNum++;
 }
 
 //Create a Deck of Cards Dynamically
@@ -89,7 +92,7 @@ function newGame(){
 
 //init timer
 // $('.countdown') = function (sec, count){		//called when user clicks start
-// 		var sec = 15; 							//....default
+// 		var sec = 15; 							
 // 		var count = setInterval(function(){
 // 		$('timer.count').text(": " + sec--)
 // 		if (sec == -1){
@@ -111,7 +114,7 @@ function newGame(){
 			newGame();
 	}
 	else {
-		console.log ('try Again.');
+		console.log ('try Again.');	
 	}
 });
 
@@ -197,21 +200,21 @@ function newGame(){
 
 
 //CREATE TIMER 
-// var timeClock = $('<div>');
-// 	var countdown = function (){					//called when user clicks start
+// $('#timer') = function(){
+// 	var countdown = function (sec, count){		//called when user clicks start
 // 		var sec = 15; 							//....default
 // 		var count = setInterval(function(){
-// 		$('timer.count').text(": " + sec--)
+// 		$('.clock.count').text(": " + sec--)
+// 			console.log(sec)
 // 		if (sec == -1){
-// 			scoreIt();
-// 			resetStartButton();
-// 			$('timer.count').fadeOut('slow')
+// 			$('.clock.count').fadeOut('slow')
 // 			clearInterval(count);
-// 			console.log(sec);
 // 		}
-// }, 1000);			
-//  ('timer').append('timeClock')	
+// 		}, 1000);			
+//  	}
 // }
+
+
 
 //CREATE BUTTONS
 // var easyBtn = $('<button>EASY</button>').click(function(){
