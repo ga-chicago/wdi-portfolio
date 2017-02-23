@@ -57,16 +57,13 @@ function newGame(){
 // 	}
 // }
 
-//Initiate Game
+// Initiate Game
 // $(document).ready() 
-// $('init') = function(){
-// 	numerator = ""
-// 	denominator	= ""
-// 	$('start').undhide;
-// 	$('easy').undhide;
-// 	$('hard').unhide;
-// 	$('timer').hidden;
-// 	$('reset').hidden;
+// $('cards').hidden();
+// }
+
+// function pulse(){
+// 	$('.clockValue').delay(200).fadeOut('slow').delay(50).fadeIn('slow',pulse);
 // }
 
 //Score It! - keeps score in the game 
@@ -84,13 +81,10 @@ var score = 0;
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
 	if (clickValue === playValue){
-			setTimeout(function(){
-				$(this).effect('pulsate', {times:3}, 2000);
-				scoreIt();
-			}, 3025);
+		$(this).effect('pulsate', {times:1}, 2000);
+		scoreIt();
 //			alert('You Got It!')
-			scoreIt();
-			newGame();				//called here gives game some continuous speed
+		newGame();				//called here gives game some continuous speed
 	}
 	else {
 		alert('try Again.');	
@@ -106,12 +100,12 @@ countdown = function(){		//call when each deck is played
 			console.log(sec);
 			if (sec == 0){
 				$('.clockValue').text('TIMES UP!');
-				$('.clockValue').fadeOut('slow');
-				$('cards').hide();
+//				$('.clockValue').fadeOut('slow');
 				clearInterval(count);
 			}
 		}, 1000);			
 }
+$('cards').hide();
 
 
 //CREATE BUTTONS - start, reset and change difficulty
@@ -129,7 +123,7 @@ $('.reset').click(function(e){			//refreshes page and restarts game
 })
 
 $('.easy').click(function(e){			//makes game easy
-	$('clockValue').text(25);
+	$('clockValue').text('25');
 	sec = 25;
   
 	console.log('easy! timer set at: ' + sec + ' seconds');
@@ -137,7 +131,7 @@ $('.easy').click(function(e){			//makes game easy
 
 $('.hard').click(function(e){			//makes game harder
 	sec = 15;
-	$('clockValue').text(15);
+	$('clockValue').text('15');
 	console.log('hard! timer set at: ' + sec + ' seconds');
 
 })
