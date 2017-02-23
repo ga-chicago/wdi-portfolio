@@ -53,31 +53,31 @@ var decks = [
 
 [{text: "4/20", value: .2},{text: "1/3", value: .333}, {text: "0/20", value: 0},
 {text: "5/8", value: .675},{text: "5/1", value: 5}, {text: "11/22", value: .917},
-{text: "3/5", value: .6},{text: "9/9", value: 1}, {text: "6/7", value: .86},
+{text: "3/5", value: .6},{text: "4/20", value: .2}, {text: "6/7", value: .86},
 {text: "3/10", value: .3},{text: "4/12", value: .333}, {text: "1/1", value: 1}, 
-{text: "6/24", value: .25}, {text: "1/2", value: .5}, {text: "6/20", value: .30},
+{text: "6/24", value: .25}, {text: "1/2", value: .5}, {text: "1/5", value: .20},
 {text: "2/10", value: .20},],
 
-[{text: "2/4", value: .5},{text: "1/2", value: .5}, {text: "3/5", value: .6},
-{text: "2/6", value: .333},{text: "3/9", value: .333}, {text: "6/9", value: .667},
+[{text: "2/4", value: .5},{text: "2/1", value: 2}, {text: "3/5", value: .6},
+{text: "6/2", value: 3},{text: "2/16", value: .125}, {text: "4/32", value: .125},
 {text: "2/7", value: .286},{text: "3/4", value: .75}, {text: "5/6", value: .833},
-{text: "4/10", value: .4},{text: "7/8", value: .875}, {text: "5/15", value: .333}, 
-{text: "3/16", value: .188}, {text: "4/1", value: 4}, {text: "1/11", value: .091},
-{text: "1/8", value: .333},],
+{text: "4/10", value: .4},{text: "5/16", value: .313}, {text: "1/4", value: .25}, 
+{text: "3/16", value: .188}, {text: "3/1", value: 3}, {text: "1/11", value: .091},
+{text: "1/8", value: .125},],
 
 [{text: "2/4", value: .5},{text: "1/2", value: .5}, {text: "3/5", value: .6},
 {text: "2/6", value: .333},{text: "3/9", value: .333}, {text: "6/9", value: .667},
-{text: "2/7", value: .286},{text: "3/4", value: .75}, {text: "5/6", value: .833},
-{text: "4/10", value: .4},{text: "7/8", value: .875}, {text: "5/15", value: .333}, 
+{text: "2/18", value: .111},{text: "3/4", value: .75}, {text: "5/6", value: .833},
+{text: "4/10", value: .4},{text: "7/8", value: .875}, {text: "3/27", value: .111}, 
 {text: "3/16", value: .188}, {text: "4/1", value: 4}, {text: "1/11", value: .091},
-{text: "1/9", value: .333},],
+{text: "1/9", value: .111},],
 
-[{text: "2/4", value: .5},{text: "1/2", value: .5}, {text: "3/5", value: .6},
-{text: "2/6", value: .333},{text: "3/9", value: .333}, {text: "6/9", value: .667},
+[{text: "2/4", value: .5},{text: "8/20", value: .4}, {text: "3/5", value: .6},
+{text: "2/6", value: .333},{text: "4/10", value: .4}, {text: "6/9", value: .667},
 {text: "2/7", value: .286},{text: "3/4", value: .75}, {text: "5/6", value: .833},
-{text: "4/10", value: .4},{text: "7/8", value: .875}, {text: "5/15", value: .333}, 
+{text: "4/10", value: .4},{text: "16/40", value: .4}, {text: "5/15", value: .333}, 
 {text: "3/16", value: .188}, {text: "4/1", value: 4}, {text: "1/11", value: .091},
-{text: "1/10", value: .333},],
+{text: "2/5", value: .4},],
 
 ];
 
@@ -105,26 +105,6 @@ function newGame(){
 	deckNum++;
 }
 
-//Create a Deck of Cards Dynamically
-// $('deck') = function (n, d, value){
-// 	for (n = 0; n <= 10; n++){
-// 		for (d = 0; d <=10; d++) {
-// 			var $('cardInDeck').text.innerHTML(n + divider + d);
-// 			var $('cardInDeck').value = (n / d);
-// 		}
-// 	}
-// }
-
-//Initiate Game
-//newGame();
-// $(document).ready() 
-// $('cards').hidden();
-// }
-
-// function pulse(){
-// 	$('.clockValue').delay(200).fadeOut('slow').delay(50).fadeIn('slow',pulse);
-// }
-
 //Score It! - keeps score in the game 
 scoreValue = 0;
 
@@ -144,25 +124,26 @@ var score = 0;
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
 	if (clickValue === playValue){
-		$(this).effect('pulsate', {times:1}, 2000);
+		$(this).effect('pulsate', {times:2}, 1000);
 		scoreIt();
 	}	
 //			alert('You Got It!')
 	// newGame();				
 	else { 
-//		$('#buzz').play();
-		alert('try Again.');	
+		// $('#buzz').play();
+		$(this).effect("highlight", 2000);
+//		alert('try Again.');	
 	}
 });
 
 //CREATE TIMER and countdown function
-var sec = 15;
+var sec = 61;
 countdown = function(){		//call when each deck is played
 		var count = setInterval(function(){
 		$('.sec').text(sec--);
 			$('.clockValue').text(sec);
 			console.log(sec);
-			if (sec == 0){
+			if (sec == -1){
 				$('.clockValue').text('TIMES UP!');
 				$('.next').hide();
 //				$('.clockValue').fadeOut('slow');
@@ -190,13 +171,13 @@ $('.reset').click(function(e){			//refreshes page and restarts game
 
 $('.easy').click(function(e){			//makes game easy
 	$('clockValue').text('60');
-	sec = 60;
+	sec = 61;
   
 	console.log('easy! timer set at: ' + sec + ' seconds');
 })
 
 $('.hard').click(function(e){			//makes game harder
-	sec = 30;
+	sec = 31;
 	$('clockValue').text('30');
 	console.log('hard! timer set at: ' + sec + ' seconds');
 

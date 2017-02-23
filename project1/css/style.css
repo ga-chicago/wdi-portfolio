@@ -104,10 +104,14 @@ header{
 }
 
 
-#buttons {
+#buttons, #equals {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
+}
+
+.blinkRed {
+	background-color: red;
 }
 
 button {
@@ -144,7 +148,6 @@ button#hidden {
 	float: left;
 	color: #9B42E8;
 	padding-left: 10px;
-
 }
 
 
