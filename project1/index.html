@@ -25,7 +25,7 @@
 
 <!--Logo and Share Buttons-->
 		<header>
-			<img id = "logo" src = "images/762ec729-b4d0-44e4-ae4e-c74935a70142.png" >
+			<img id = "logo" src = "images/logo.png" >
 			<div>
 <!-- 				<ul id = 'share'>
 					<li img src = "#" href ="#">Facebook</li>
@@ -42,56 +42,56 @@
 <!-- 				<div id = 'winner'>
 					<h2>Great Job!</h2>
 				</div> -->
-					<div class = "cards" id = '1' data-value = ".5">1/2
+					<div class = "cards" id = '1' data-value = ""><img src="">
 					</div>	
 
-					<div class = "cards" id = '2' data-value = ".333">2/6
+					<div class = "cards" id = '2' data-value = "">
 					</div>
 
-					<div class = "cards" id = '3' data-value = ".75">3/4		
+					<div class = "cards" id = '3' data-value = "">		
 					</div>
 
-					<div class = "cards" id = '4' data-value = ".8">4/5
+					<div class = "cards" id = '4' data-value = "">
 					</div>
 
-					<div class = "cards" id = '5' data-value = ".667">2/3
+					<div class = "cards" id = '5' data-value = "">
 					</div>	
 
-					<div class = "cards" id = '6' data-value = ".5">1/2
+					<div class = "cards" id = '6' data-value = "">
 					</div>	
 
-					<div class = "cards" id = '7' data-value = ".333">2/6
+					<div class = "cards" id = '7' data-value = "">
 					</div>
 
-					<div class = "cards" id = '8' data-value = ".75">3/4		
+					<div class = "cards" id = '8' data-value = "">		
 					</div>
 
-					<div class = "cards" id = '9' data-value = ".8">4/5
+					<div class = "cards" id = '9' data-value = "">
 					</div>
 
-					<div class = "cards" id = '10' data-value = ".667">2/3
+					<div class = "cards" id = '10' data-value = "">
 					</div>			
 
-					<div class = "cards" id = '11' data-value = ".5">1/2
+					<div class = "cards" id = '11' data-value = "">
 					</div>	
 
-					<div class = "cards" id = '12' data-value = ".333">2/6
+					<div class = "cards" id = '12' data-value = "">
 					</div>
 
-					<div class = "cards" id = '13' data-value = ".75">3/4		
+					<div class = "cards" id = '13' data-value = "">		
 					</div>
 
-					<div class = "cards" id = '14' data-value = ".8">4/5
+					<div class = "cards" id = '14' data-value = "">
 					</div>
 
-					<div class = "cards" id = '15' data-value = ".667">2/3
+					<div class = "cards" id = '15' data-value = "">
 					</div>				
 			</div>
 
 <!--Card in Play-->
 			<div id = "inPlay">	
 				<div class = "equals">
-					<div  class = "playCard" id = '6' data-value= ".5">2/4
+					<div  class = "playCard" id = '16' data-value= "">
 					</div>
 				</div>	
 <!--Display Deck-->
@@ -102,7 +102,7 @@
 <!--Timer Area-->		
 				 <div class = "time">
 						<h3>TIME:</h3>
-						<h1 class = "clockValue">  </h1>
+						<h1 class = "clockValue">??</h1>
 					</div>
 
 <!--Scoring Display Area-->			
@@ -117,6 +117,7 @@
 					<button class = 'reset'>RESET</button>
 					<button class = 'easy'>EASY</button>
 					<button class = 'hard'>HARD</button>
+					<button class = 'next'>NEXT</button>
 			</div>	
 			</div>
 </div>		
@@ -124,9 +125,11 @@
 			<div id = "footer">	
 				<article id = 'instruct'></article>
 					<p><span>INSTRUCTIONS:</span>
-					<br> 1. Look at the card in play.  Press START 
-					<br> 2. Click EASY or HARD to set timer 
-					<br> 3. Click on the equivalent fractions before time Expires!.
+					<br> 1. Click EASY or HARD to set timer 
+					<br> 2. Look at the card in play.  Press START 
+					<br> 3. CLICK on every equivalent fraction on the board
+					<br> 4. Click NEXT to deal more cards
+					<br> 5. Find as many as you can before time expires.
 					</p>
 			</div>	
 			<div id = "logo2"></div>	
@@ -136,7 +139,8 @@
 				</p>
 			</div>	
 		</div>	
-	<audio src = "audio/Marsel_Minga_-_04_-_Kar_Designer.mp3" autoplay=""></audio>
+	<audio id = "bgMusic" src = "audio/Marsel_Minga_-_04_-_Kar_Designer.mp3" autoplay=""></audio>
+	<audioid id = "buzz" src = "audio/Wrong-answer-sound-effect.mp3"> </audio>
 	<script src="js/app.js"></script>
 </body>
 </html>
