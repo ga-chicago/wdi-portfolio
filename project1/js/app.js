@@ -120,6 +120,7 @@ function resetScore(){
 //PLAY THE GAME	- the clicking action the chooses fractions and changes board
 var score = 0;
 	$('.cards').click(function(e){
+		$(this).unbind();
 		console.log('clicked');
 		var clickValue = $(e.target).data('value');	
 		var playValue = $('.playCard').data('value');	
