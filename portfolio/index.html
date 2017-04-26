@@ -1,41 +1,74 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>My Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"/>
+<head>
+	<title>Chris Swormstedt</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	</head>
-	<body>
-		
-		<header>
-			<img src="http://i.imgur.com/0RTFaT1.jpg?3">
-			<!--<a href="http://imgur.com/0RTFaT1"><img src="http://i.imgur.com/0RTFaT1.jpg?2" title="source: imgur.com" /></a>-->
-			<h1>Chris Swormstedt</h1>
-			<h2><a href="mailto:cswormstedt7@gmail.com"/>cswormstedt7@gmail.com</a> - <a href="https://twitter.com/SWORMTROOPER" target="_blank">@swormstrooper</a> - 513-324-1074</h2>
-		</header>
-		
-		<nav class="clearfix">
-			<ul>
-			<li><a href="#">General Assemnly</a></li>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#">References</a></li>
-			</ul>
-		</nav>
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
 
-		<section>
-			<h3>About Me</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
-		</section>
+	<!-- icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-		<footer>
-			<p>&copy; Me</p>
-		</footer>
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
 
-	</body>
+	<!-- JQuery -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<header>
+		<h1> Chris Swormstedt </h1>
+		<h2> Full Stack Developer </h2>
+	</header>
+
+	<div id="about">
+		<h3>About</h3>
+		<p>I am Web Developer with real world experience in sales, marketing and building client relationships. I am a creative, forward thinking individual who is always eager to learn. I have moved seven times to five states and another country. I view this as an advantage that has allowed me to grow and adapt in any situation.</p>
+	</div>
+
+	<div id="projects">
+		<h3>Projects</h3>
+		<div id="bricks">
+			<a href="https://cswormstedt.github.io/project1/">Bricks</a>
+			<p>A classic arcade game rendered in the browser to help pass the time. Built using Canvas and JavaScript DOM manipulation.</p>
+		</div>
+		<div id="greenRun">
+			<a href="https://verderun.herokuapp.com/user/start">Green Run</a>
+			<p>A responsive full-stack web application for your mobile device or computer for those who enjoy mountain resorts. Built on Node /Express, MongoDB, Gulp, LESS, and Handlebars.</p>
+		</div>
+		<div id="lodsta">
+			<a href="https://cslb-order-app.herokuapp.com/home">Court Street Lobster App</a>
+			<p>A food ordering application for my brothers restaurant. Built on Ruby with Sinatra, Postgresql, Active Record, JavaScript and LESS.</p>
+		</div>
+		<div id="whereApp">
+			<a href="https://github.com/cswormstedt/WhereInTheWorld">WhereApp</a>
+			<p> A React Native application designed with the idea to help know time zones of friends and family across the world. </p>
+		</div>
+	</div>
+
+	<div id="contact">
+		<div id="github">
+			<a href="https://github.com/cswormstedt"><i class="fa fa-github" style="font-size:36px"></i></a>
+		</div>
+		<div id="linkedin">
+			<a href="www.linkedin.com/in/chris-swormstedt"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+		</div>
+		<div id="email">
+			<a href="mailto:cswormstedt7@gmail.com"><i class="fa fa-google" style="font-size:36px"></i></a>
+		</div>
+		<div id="pipedPiper">
+			<a href="https://www.youtube.com/watch?v=9176bgmuwPc"><i class="fa fa-pied-piper" style="font-size:36px"></i></a>
+		</div>
+	</div>
+
+
+<script src="js/app.js"></script>
+</body>
 </html>
