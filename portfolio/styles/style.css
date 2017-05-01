@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+}
+
+body {
+	text-align: center;
+	margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(229, 218, 201);
+    color: rgb(41, 51, 72)
+}
+
+header {
+	margin-top: 200px;
+}
+
+.section {
+    height: 100%;
+    padding-top: 20px;
+    
+}
+
+.sectionTwo {
+	height: 100%;
+	background: rgb(226, 91, 70)
+}
+
+
+.hello {
+	margin-top: 200px;
+}
+
+.contact {
+	text-align: center;
+	display: flex;
+	width:100px; 
+	margin: 0 auto;
+}
+
+.mainP {
+	font-size:20px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+i {
+	padding: 10px;
+	margin: 10px;
+	color: rgb(31, 157, 148)
+}
+
+a :hover {
+	color: rgb(41, 51, 72)
+}
+
+.thumbnail img {
+    height:200px;
+    width:100%;
+}
